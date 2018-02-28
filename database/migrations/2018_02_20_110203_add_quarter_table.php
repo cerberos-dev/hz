@@ -30,6 +30,6 @@ class AddQuarterTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('quarter');
     }
 }
