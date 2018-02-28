@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Quarter extends Model
 {
+    use Uuids;
+
     /**
      * Indicates if the IDs are auto-incrementing.
      * @var bool

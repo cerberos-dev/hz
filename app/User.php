@@ -7,6 +7,14 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+    use Uuids;
+
+    /**
+     * Indicates if the IDs are auto-incrementing.
+     * @var bool
+     */
+    public $incrementing = false;
+
     use Notifiable;
 
     /**
