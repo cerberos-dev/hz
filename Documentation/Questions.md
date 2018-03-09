@@ -1,6 +1,6 @@
 # The Credit Monitor
 
-See the [Assignment PDF (in Dutch)](Documentation/Opdrachtomschrijving_CreditMonitor.pdf) for more details regarding 
+See the [Assignment PDF (in Dutch)](./Opdrachtomschrijving_CreditMonitor.pdf) for more details regarding 
 data structures and a general overview of what the assigned should be
 
 # Questions regarding the Workshop
