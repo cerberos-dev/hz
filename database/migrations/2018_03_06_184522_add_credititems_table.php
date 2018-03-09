@@ -13,7 +13,7 @@ class AddCredititemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('credititems', function (Blueprint $table){
+        Schema::create('credit_items', function (Blueprint $table){
             $table->uuid('id');
             $table->primary('id');
             $table->string('abbrev',10);
@@ -32,6 +32,6 @@ class AddCredititemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('credititems');
+        Schema::dropIfExists('credit_items');
     }
 }
