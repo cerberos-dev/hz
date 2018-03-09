@@ -14,4 +14,20 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         //
     ];
+
+    /**
+     * Fixes the token mismatch issue you can get when running tests
+     * @author Marius van Zundert <marius.vanzundert@youaredigital.nl>
+     * Return a request @param \Illuminate\Http\Request $request
+     * @return bool
+     */
+    protected function tokensMatch($request)
+    {
+        // Don't validate CSRF when testing.
+        if(env('APP_ENV') === 'testing') {
+            return true;
+        }
+
+        return parent::tokensMatch($request);
+    }
 }
