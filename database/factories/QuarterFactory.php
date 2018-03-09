@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\Quarter::class, function (Faker $faker) {
+$factory->define(App\Models\Quarter::class, function (Faker $faker) {
     return [
         'year' => $faker->numberBetween(1,4),
         'order' => $faker->numberBetween(1,4)
