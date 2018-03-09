@@ -19,4 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/quarter', 'QuarterController@index')->name('quarter')->middleware('auth');
+Route::resource('/quarter', 'QuarterController')->middleware('auth');
