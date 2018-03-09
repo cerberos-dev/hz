@@ -19,4 +19,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/quarter', 'QuarterController')->middleware('auth');
+Route::group(['middleware' => ['auth'], 'prefix' => 'quarter'], function () {
+    Route::get('/', 'QuarterController@index')->name('quarter.index');
+    Route::post('/', 'QuarterController@store')->name('quarter.store');
+
+    Route::get('/create', 'QuarterController@create')->name('quarter.create');
+    Route::match(['put', 'patch'], '/{quarter}', 'QuarterController@update')->name('quarter.update');
+
+    Route::get('/{quarter}', 'QuarterController@show')->name('quarter.show');
+    Route::get('/{quarter}/edit', 'QuarterController@edit')->name('quarter.edit');
+    Route::delete('/{quarter}', 'QuarterController@destroy')->name('quarter.destroy');
+});
