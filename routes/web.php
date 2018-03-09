@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['middleware' => ['auth'], 'prefix' => 'quarter'], function () {
+Route::group(['middleware' => 'auth', 'prefix' => 'quarter'], function () {
     Route::get('/', 'QuarterController@index')->name('quarter.index');
     Route::post('/', 'QuarterController@store')->name('quarter.store');
 
