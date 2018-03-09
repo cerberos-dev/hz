@@ -18,4 +18,14 @@ class CreditItems extends Model
      * @var bool
      */
     public $incrementing = false;
+
+    /**
+     * Credit items belong to a single quarter
+     * @author Marius van Zundert <marius.vanzundert@youaredigital.nl>
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function quarter()
+    {
+        return $this->belongsTo(Quarter::class);
+    }
 }
