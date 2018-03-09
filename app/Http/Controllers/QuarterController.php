@@ -15,6 +15,14 @@ class QuarterController extends Controller
 {
 
     /**
+     * QuarterController constructor.
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Show all Quarters.
      * @author Marius van Zundert <marius.vanzundert@youaredigital.nl>
      * @return mixed
