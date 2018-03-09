@@ -42,6 +42,6 @@ class QuarterController extends Controller
      */
     public function store(Request $request)
     {
-        return response(201);
+        return response('', 201);
     }
 }

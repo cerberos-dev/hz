@@ -42,6 +42,7 @@ class QuarterTest extends TestCase
         $newQuarter = factory(Quarter::class)->raw();
 
         $this->withExceptionHandling()
+            ->WithoutMiddleware()
             ->actingAs($user)
             ->post(route('quarter.store'), $newQuarter)
             ->assertStatus(201);
