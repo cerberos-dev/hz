@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use App\User;
-use function factory;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
