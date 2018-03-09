@@ -14,7 +14,7 @@ class AlterCredititemsTable extends Migration
     public function up()
     {
         Schema::table('credit_items', function (Blueprint $table){
-            $table->uuid('quarter_id')->after('id');
+            $table->uuid('quarter_id')->after('id')->nullable();
         });
 
         Schema::table('credit_items', function (Blueprint $table){
@@ -32,7 +32,7 @@ class AlterCredititemsTable extends Migration
     public function down()
     {
         Schema::table('credit_items', function (Blueprint $table){
-            $table->dropForeign('quarter_id');
+            $table->dropForeign('credit_items_quarter_id_foreign');
         });
 
         Schema::table('credit_items', function (Blueprint $table) {
