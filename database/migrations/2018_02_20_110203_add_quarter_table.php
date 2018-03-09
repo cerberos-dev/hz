@@ -13,7 +13,7 @@ class AddQuarterTable extends Migration
      */
     public function up()
     {
-        Schema::create('quarter', function (Blueprint $table){
+        Schema::create('quarters', function (Blueprint $table){
             $table->uuid('id');
             $table->primary('id');
             $table->tinyInteger('year')->unsigned()->default(1);
@@ -30,6 +30,6 @@ class AddQuarterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('quarter');
+        Schema::dropIfExists('quarters');
     }
 }
